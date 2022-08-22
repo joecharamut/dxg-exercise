@@ -56,6 +56,23 @@
     <li>Additionally, Mapbox has a product called <a href="https://docs.mapbox.com/help/getting-started/web-apps/">Mapbox GL JS</a>
         to embed an interactive map into a website, with layers for POIs. This seems perfect for our use case</li>
   </ul>
+
+  <li>Backend</li>
+  <ul>
+    <li>Because the client wants multiple user accounts to be able to login and manage their own POIs, we would
+        need at the very least a database for storing login information. This could also be used to check if a 
+        user is allowed to create/edit/delete POIs.</li>
+    <li>The login table could be as simple as a user id, username, and password hash. We can use the user id later to
+        attach POIs to specific user accounts. We could also have extra fields for maybe a display name or profile picture 
+        that can be shown when inspecting the POI.</li>
+    <li>The POIs the users make will have to be stored somewhere, that can also be in a database. I think that a 
+        point of interest can be represented as a database row of the user id which created it, a creation/modification time, 
+        the latitude and longitude of the point, the description of the point, and the photo.</li>
+    <li>Storing the photo in the database isn't the best idea, as photos can get quite large and as far as I know that
+        would hurt the database performance. Perhaps that can instead be a link to the photo stored 
+        somewhere else. I'm not familiar with the DXG server situation so I can't say for certain if we would set up 
+        a photo upload endpoint or have that be a different cloud service entirely.</li>
+  </ul>
 </ul>
 
 </body>
