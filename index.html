@@ -92,7 +92,14 @@
         would work for the database, but I'm not really sure how we could let the user do picture uploads while offline.</li>
   </ul>
 
-
+  <li>Frontend</li>
+  <ul>
+    <li>For the frontend, since the DXG typically uses Vue we should probably use that. Mapbox has the map view as a JS library,
+        so that shouldn't be a problem. As well, someone has made <a href="https://soal.github.io/vue-mapbox/">a wrapper</a> for it 
+        to make it a Vue component.</li>
+    <li>Looking at Vuetify indicates that it supports mobile devices by default. Because we also want to target mobile devices,
+        that seems like an easy way to make it work well and look good on both PC and mobile platforms.</li>
+  </ul>
 </ul>
 
 </body>
