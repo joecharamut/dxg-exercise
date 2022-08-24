@@ -87,6 +87,9 @@
         would hurt the database performance. Perhaps that can instead be a link to the photo stored 
         somewhere else. I'm not familiar with the DXG server situation so I can't say for certain if we would set up 
         a photo upload endpoint or have that be a different cloud service entirely.</li>
+    <li>In any case, considering that the DXG has used Cloud Firestore in the past, we should use that. It also offers 
+        a feature that allows users to make changes while offline and it will sync up when internet is restored. This
+        would work for the database, but I'm not really sure how we could let the user do picture uploads while offline.</li>
   </ul>
 
 
